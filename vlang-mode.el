@@ -30,7 +30,7 @@
       (let* (
              ;; define several category of keywords
              (x-keywords '("break" "const" "continue" "defer" "else" "enum" "fn" "for" "go" "goto" "if" "import" "in" "interface" "match" "module" "mut" "none" "or" "pub" "return" "struct" "type" "var" "assert" "sizeof" "typeof"))
-             (x-types '("bool" "string" "i8" "i16" "int" "i64" "i128" "byte" "u16" "u32" "u64" "u128" "rune" "f32" "f64" "byteptr" "voidptr" "charptr" "any" "any_int" "any_float" "map"))
+             (x-types '("bool" "string" "i8" "i16" "int" "i64" "i128" "byte" "u16" "u32" "u64" "u128" "rune" "f32" "f64" "size_t" "ssize_t" "char" "byteptr" "voidptr" "charptr" "any" "any_int" "any_float" "map"))
              (x-constants '("true" "false"))
 
              ;; generate regex string for each category of keywords
