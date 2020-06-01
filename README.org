@@ -1,0 +1,14 @@
+* vlang-mode.el
+  Emacs major mode for the V programming language
+
+** Installation and usage
+   Using [[https://github.com/quelpa/quelpa][quelpa]], add the following to your emacs init
+   #+BEGIN_SRC emacs-lisp
+     (quelpa
+      '(vlang-mode :fetcher url
+                   :url "https://raw.githubusercontent.com/naheel-azawy/vlang-mode.el/master/vlang-mode.el"))
+     (require 'vlang-mode)
+   #+END_SRC
+
+** Licenses
+   GPL-3
