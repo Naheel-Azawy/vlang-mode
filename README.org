@@ -1,6 +1,8 @@
 * vlang-mode.el
   Emacs major mode for the V programming language
 
+  [[./img.png]]
+
 ** Installation and usage
    Using [[https://github.com/quelpa/quelpa][quelpa]], add the following to your emacs init
    #+BEGIN_SRC emacs-lisp
