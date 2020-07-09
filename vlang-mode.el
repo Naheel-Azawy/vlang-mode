@@ -29,7 +29,7 @@
 (setq vlang-font-lock-keywords
       (let* (
              ;; define several category of keywords
-             (x-keywords '("break" "const" "continue" "defer" "else" "enum" "fn" "for" "go" "goto" "if" "import" "in" "interface" "match" "module" "mut" "none" "or" "pub" "return" "struct" "type" "var" "assert" "sizeof" "typeof"))
+             (x-keywords '("as" "assert" "break" "const" "continue" "defer" "else" "enum" "fn" "for" "go" "goto" "if" "import" "in" "interface" "is" "match" "module" "mut" "none" "or" "pub" "return" "struct" "type" "unsafe" "sizeof" "typeof"))
              (x-types '("bool" "string" "i8" "i16" "int" "i64" "i128" "byte" "u16" "u32" "u64" "u128" "rune" "f32" "f64" "size_t" "ssize_t" "char" "byteptr" "voidptr" "charptr" "any" "any_int" "any_float" "map"))
              (x-constants '("true" "false"))
 
@@ -47,8 +47,9 @@
 (define-derived-mode vlang-mode javascript-mode "V"
   "Major mode for editing V files"
   (setq-local font-lock-defaults '((vlang-font-lock-keywords))))
-(add-to-list 'auto-mode-alist '("\\.v\\'"  . vlang-mode))
-(add-to-list 'auto-mode-alist '("\\.vv\\'" . vlang-mode))
+(add-to-list 'auto-mode-alist '("\\.v\\'"   . vlang-mode))
+(add-to-list 'auto-mode-alist '("\\.vv\\'"  . vlang-mode))
+(add-to-list 'auto-mode-alist '("\\.vsh\\'" . vlang-mode))
 
 (provide 'vlang-mode)
 
