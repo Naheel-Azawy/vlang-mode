@@ -1,4 +1,4 @@
-;;; vlang-mode.el --- Major mode for the V programming language
+;;; vlang-mode.el --- Major mode for the V programming language  -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
