@@ -23,10 +23,11 @@
 ;; URL: https://github.com/Naheel-Azawy/vlang-mode.el
 ;;
 ;; This file is not part of GNU Emacs.
-
 ;;; Code:
 
-(setq vlang-font-lock-keywords
+
+
+(defvar vlang-font-lock-keywords
       (let* (
              ;; define several category of keywords
              (x-keywords '("as" "assert" "break" "const" "continue" "defer" "else" "enum" "fn" "for" "go" "goto" "if" "import" "in" "interface" "is" "match" "module" "mut" "none" "or" "pub" "return" "struct" "type" "unsafe" "sizeof" "typeof"))
@@ -42,7 +43,8 @@
           (,x-keywords-regexp  . font-lock-keyword-face)
           (,x-types-regexp     . font-lock-type-face)
           (,x-constants-regexp . font-lock-constant-face)
-          )))
+          ))
+      "V language keyword regexp for font-locking.")
 ;;;###autoload
 (define-derived-mode vlang-mode javascript-mode "V"
   "Major mode for editing V files"
