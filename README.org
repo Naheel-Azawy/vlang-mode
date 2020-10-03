@@ -4,13 +4,19 @@
   [[./img.png]]
 
 ** Installation and usage
-   Using [[https://github.com/quelpa/quelpa][quelpa]], add the following to your emacs init
-   #+BEGIN_SRC emacs-lisp
+   Using [[https://github.com/raxod502/straight.el][straight.el]], add the following to your emacs init,
+   #+begin_src emacs-lisp
+	 (straight-use-package
+	  '(vlang-mode :type git :host github :repo "Naheel-Azawy/vlang-mode"))
+   #+end_src
+
+   Or using [[https://github.com/quelpa/quelpa][quelpa]],
+   #+begin_src emacs-lisp
      (quelpa
       '(vlang-mode :fetcher url
                    :url "https://raw.githubusercontent.com/naheel-azawy/vlang-mode.el/master/vlang-mode.el"))
      (require 'vlang-mode)
-   #+END_SRC
+   #+end_src
 
 ** Licenses
    GPL-3
