@@ -49,7 +49,18 @@
 (define-derived-mode vlang-mode javascript-mode "V"
   "Major mode for editing V files"
   (setq-local font-lock-defaults '((vlang-font-lock-keywords))))
-(add-to-list 'auto-mode-alist '("\\.v\\'"   . vlang-mode))
+
+(defun vlang-or-verilog-mode ()
+  "Vlang or verilog mode."
+  (interactive)
+  (if (> (point-max) 30)
+      (let ((end (buffer-substring (point-max) (- (point-max) 30))))
+        (if (string-match "endmodule" end)
+            (verilog-mode)
+          (vlang-mode)
+          ))))
+
+(add-to-list 'auto-mode-alist '("\\.v\\'"   . vlang-or-verilog-mode))
 (add-to-list 'auto-mode-alist '("\\.vv\\'"  . vlang-mode))
 (add-to-list 'auto-mode-alist '("\\.vsh\\'" . vlang-mode))
 
